@@ -1,3 +1,14 @@
+
+const t = 'TILE0000';
+const initialState = [
+  [t,t,t,t,t],
+  [t,t,t,t,t],
+  [t,t,t,t,t],
+  [t,t,t,t,t],
+  [t,t,t,t,t]
+];
+
+
 // World constants
 export const ADD_COLUMN = 'ADD_COLUMN';
 export const ADD_ROW = 'ADD_ROW';
@@ -39,4 +50,59 @@ export function fillWorld(tileID) {
 
 export function loadWorld(loadedWorld) {
   return { type: LOAD_WORLD, loadedWorld };
+}
+
+
+export function expandMap(direction) {
+  switch (direction) {
+  case DIRECTION_NORTH:
+    return [
+      addRow(false),
+    ];
+  case DIRECTION_SOUTH:
+    return [
+      addRow(true)
+    ];
+  case DIRECTION_WEST:
+    return [
+      addColumn(false),
+    ];
+  case DIRECTION_EAST:
+    return [
+      addColumn(true)
+    ];
+  default:
+    return [];
+  }
+}
+
+export function shrinkMap(direction) {
+  switch (direction) {
+  case DIRECTION_NORTH:
+    return [
+      deleteRow(false),
+    ];
+  case DIRECTION_SOUTH:
+    return [
+      deleteRow(true)
+    ];
+  case DIRECTION_WEST:
+    return [
+      deleteColumn(false),
+    ];
+  case DIRECTION_EAST:
+    return [
+      deleteColumn(true)
+    ];
+  default:
+    return [];
+  }
+}
+
+
+
+export function loadAppData(loadedWorld) {
+  return [
+    loadWorld(loadedWorld)
+  ];
 }
