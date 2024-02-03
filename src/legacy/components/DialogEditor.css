@@ -1,0 +1,39 @@
+.dialogEditor {
+  width: 40em;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 1em 0;
+}
+
+.lineEditor {
+  display: flex;
+  border-bottom: 2px solid rgb(232, 232, 232);
+}
+
+.lineEditor:last-of-type {
+  border-bottom: none;
+}
+
+.lineInput {
+  composes: inputBase from '../styles/inputs.css';
+  flex: 1 0 auto;
+  padding: .5em;
+}
+
+.choiceSelect {
+  composes: selectBase from '../styles/inputs.css';
+}
+
+.addlineButton {
+  composes: greyButton greenOnHover from '../styles/buttons.css';
+  border-radius: 0 0 .5em .5em;
+}
+
+.deleteButton {
+  composes: lightGreyButton redOnHover from '../styles/buttons.css';
+}
+
+.connectSelect {
+  background-color: white;
+  composes: selectBase from '../styles/inputs.css';
+}

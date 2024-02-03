@@ -1,0 +1,57 @@
+.map {
+  border-spacing: 0;
+}
+
+.root {
+  padding: 1em;
+}
+
+.table, .table tr, .table td {
+  margin: 0;
+  border-spacing: 0;
+  padding: 0;
+}
+
+.edgeButton {
+  composes: hugeText from '../styles/type.css';
+  width: 100%;
+  min-width: 50px;
+  height: 100%;
+  min-height: 50px;
+  padding: 0;
+}
+
+.addButton {
+  composes: edgeButton;
+  composes: lightGreyButton greenOnHover from '../styles/buttons.css';
+}
+
+.cornerButton:focus {
+  outline: 0;
+}
+
+.deleteButton {
+  composes: edgeButton;
+  composes: redButton from '../styles/buttons.css';
+}
+
+.cornerButton {
+  background: rgb(181, 181, 181);
+  border: none;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  cursor: pointer;
+}
+
+.clearButton {
+  composes: cornerButton;
+}
+
+.undoButton {
+  composes: cornerButton;
+}
+
+.redoButton {
+  composes: cornerButton
+}
