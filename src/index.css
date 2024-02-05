@@ -1,0 +1,16 @@
+.cell {
+    opacity: 1;
+    transition: background .1s;
+    cursor: crosshair;
+    background-size: cover;
+    position: relative;
+}
+
+.cell:hover {
+    opacity: .9;
+}
+
+
+.tableBody {
+    border-spacing: 4px;
+}

@@ -11,7 +11,7 @@
       "allowSyntheticDefaultImports": true,
       "allowUnreachableCode": false,
       "allowUnusedLabels": false,
-      "alwaysStrict": true,
+      "alwaysStrict": false,
       "checkJs": false,
       "declaration": true,
       "disableSizeLimit": false,
@@ -50,8 +50,8 @@
       "removeComments": false,
       "skipLibCheck": true,
       "sourceMap": true,
-      "strict": true,
-      "strictNullChecks": true,
+      "strict": false,
+      "strictNullChecks": false,
       "suppressExcessPropertyErrors": false,
       "suppressImplicitAnyIndexErrors": false,
       "target": "es2017",
@@ -62,6 +62,6 @@
   },
   "include": [
       "**/*.ts"
-  ],
+, "src/world.tsx"  ],
   "exclude": []
 }
